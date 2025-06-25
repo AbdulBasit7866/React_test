@@ -1,22 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
-
+import { useState } from "react";
+import { Counter, Counter1 } from "./component/Counter";
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>{x}</h1>
+        {/* <button onClick={() => handleX(2)}>Update X value</button> */}
+        {/* <Counter handleX={handleX} /> */}
+        <Counter1 />
       </header>
     </div>
   );
