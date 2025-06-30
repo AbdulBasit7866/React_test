@@ -1,4 +1,6 @@
-export const Counter = ({ handleX }) => {
+import { useState } from "react";
+
+export const Counter = () => {
   //   const { handleX } = props;
   const [x, setX] = useState(0);
   const handleX = (y) => setX(x + y);

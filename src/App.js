@@ -1,12 +1,20 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { InputData } from "./component/Input";
+import { Counter } from "./component/Counter";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <InputData />
-      </header>
-    </div>
+    <>
+      <Routes>
+        {false ? (
+          <Route path="/Input" element={<InputData />} />
+        ) : (
+          <Route path="/Input" element={<Counter />} />
+        )}
+        <Route path="*" element={<h1>Route not found</h1>} />
+      </Routes>
+    </>
   );
 }
 
